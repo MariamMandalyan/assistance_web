@@ -1,0 +1,63 @@
+.content {
+  padding: 13px 27px;
+  border-radius: 25px;
+  cursor: default;
+  max-width: 469px;
+  position: relative;
+
+}
+
+.container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.question {
+  background-color: #F4F4F4;
+}
+
+.answer {
+  border: 1px solid #C9E5FF;
+}
+.text {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #171717;
+}
+
+.link {
+  cursor: pointer;
+  color: #61ACF2;
+  font-weight: 600;
+  font-family: Inter;
+  font-size: 16.04px;
+  font-weight: 500;
+  line-height: 19.41px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.lawyer{
+  background-color: #C9E5FF;
+}
+
+.circle{
+  background-color: #FFF;
+  border-radius: 20px;
+  width: 21px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -7px;
+  right: 9px;
+}
+
+.linkCircle{
+  border: 1px solid #C9E5FF;
+}

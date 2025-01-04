@@ -1,0 +1,22 @@
+.container {
+  border: none;
+  background-color: #F4F4F4;
+  padding: 13px 27px;
+  border-radius: 57px;
+  font-size: 16px;
+  color: #171717;
+  outline: none;
+  font-weight: 400;
+  width: 388px;
+  border: 2px solid transparent;
+
+}
+
+.error{
+  border: 2px solid salmon;
+}
+
+.errorMessage{
+  font-size: 14px;
+  color: salmon
+}

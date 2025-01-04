@@ -1,0 +1,131 @@
+.container {
+  min-height: 100vh;
+  background-image: url('../../assets/images/back.png');
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  background-position: top 0px right 0px;
+  display: flex;
+  gap: 96px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 55px 0 34px;
+  white-space: pre-wrap;
+  font-family: Raleway;
+  font-size: 48.39px;
+  font-weight: 700;
+  // line-height: 58.07px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #171717;
+
+}
+
+.shadow {
+  background-color: #badeff;
+  border-radius: 24px;
+}
+
+.description {
+  font-family: Raleway;
+  font-size: 29.04px;
+  font-weight: 400;
+  line-height: 37.75px;
+  color: #171717;
+  white-space: pre-wrap;
+
+}
+
+.buttons {
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 55px 0;
+}
+
+.bottomText {
+  font-family: Inter;
+  font-size: 16.04px;
+  font-weight: 500;
+  line-height: 19.41px;
+  color: #61ACF2;
+  cursor: pointer;
+  border-bottom: 1px solid #61ACF2;
+}
+
+.image {
+  height: 86vh;
+}
+
+.tooltip {
+  white-space: pre-wrap;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: '#171717';
+}
+
+.button {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  border-radius: 124px;
+  padding: 2px 2px 2px 30px;
+  justify-content: center;
+  background-color: #3FA2FF;
+  font-family: Inter;
+  font-size: 16.04px;
+  font-weight: 700;
+  line-height: 19.41px;
+  color: #FFFFFF;
+  transition: box-shadow 0.5s;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 13px 3px #3FA2FF;
+}
+
+.circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 46px;
+  background-color: #FFF;
+  transition: 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outlineButton {
+  cursor: pointer;
+  background-color: #FFF;
+  border-radius: 124px;
+  padding: 16px 32px;
+  border: 1px solid #8BC7FF;
+  font-family: Inter;
+  font-size: 16.04px;
+  font-weight: 400;
+  line-height: 19.41px;
+  color: #171717;
+  transition: 0.5s;
+}
+
+.outlineButton:hover {
+  background-color: #8BC7FF;
+  color: #FFF;
+}

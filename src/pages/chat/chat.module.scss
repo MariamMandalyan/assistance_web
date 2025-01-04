@@ -1,0 +1,147 @@
+.container {
+  height: 100vh;
+  background-color: #FFF;
+  padding-top: 20px;
+  display: flex;
+}
+
+.logo {
+  width: 41px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.button {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.8px;
+  padding: 10px 30px;
+  border: 1px solid #BABABA;
+  border-radius: 57px;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+
+.content {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+}
+
+.checked {
+  background-color: #171717;
+  color: #FFF;
+}
+
+.inputContainer {
+  margin-top: 25px;
+  background-color: #F4F4F4;
+  padding: 23px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.input {
+  border: none;
+  background-color: #F4F4F4;
+  border-radius: 57px;
+  color: #171717;
+  outline: none;
+  width: 100%;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  padding-left: 10px;
+}
+
+.helperText {
+  margin-bottom: 45px;
+  font-family: Raleway;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+
+.subContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+}
+
+.icon {
+  cursor: pointer;
+  width: 46px;
+}
+
+.messagesList {
+  transition: 0.7s;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 475px;
+}
+
+.messagesList::-webkit-scrollbar {
+  display: none;
+}
+
+.circle {
+  cursor: pointer;
+  width: 46px;
+  height: 46px;
+  border-radius: 46px;
+  background-color: #FFF;
+  transition: 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg{
+  transition: 0.7s;
+}
+
+.circle:hover {
+  background-color: #171717;
+
+  .svg {
+    stroke: #FFF;
+  }
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+.form{
+  position: relative;
+}
