@@ -1,9 +1,7 @@
-import React from 'react'
-import styles from './home.module.scss'
+import React from 'react';
+import styles from './home.module.scss';
 import arrowButton from '../../assets/icons/arrowButton.svg';
 import { useNavigate } from 'react-router-dom';
-import { Tooltip } from 'react-tooltip'
-import DocViewer from 'react-doc-viewer';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -48,10 +46,6 @@ const Home: React.FC = () => {
           <img src={require('../../assets/images/robot.png')} alt='logo' className={styles.image} />
         </div>
       </div>
-      {/* <DocViewer  documents={[{uri:  require("../../assets/help.docx")}]} /> */}
-      {/* <Tooltip anchorSelect="#not-clickable" style={{ backgroundColor: '#F8F8F8', color: '#171717', padding: '16px 27px', borderRadius: 25 }}>
-        <p className={styles.tooltip}>{"С учётом сложившейся международной обстановки,\nсоциально-экономическое развитие предполагает\nнезависимые способы реализации инновационных методов\nуправления процессами."}</p>
-      </Tooltip> */}
     </div>
   )
 }
