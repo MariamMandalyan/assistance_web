@@ -5,6 +5,8 @@ import { useAppDispatch, useAppSelector } from '../../store/store';
 import ChatItem from '../../components/chatItem/chatItem';
 import { addLocalMessage, sendMessage, setMessages } from '../../store/chatSlice';
 import { BeatLoader } from 'react-spinners';
+import logoutIcon from '../../assets/icons/logout.svg';
+
 
 const Chat = () => {
   const navigate = useNavigate()
@@ -18,22 +20,21 @@ const Chat = () => {
 
   useEffect(() => {
     const response = localStorage.getItem('MESSAGES_STORAGE_KEY')
-    if(response)
-    dispatch(setMessages(JSON.parse(response)))
-    // dispatch(getMessagesFromStorage())
+    if (response)
+      dispatch(setMessages(JSON.parse(response)))
   }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
     let divElement = document.getElementById('messages')
-      let scrollTo = divElement?.scrollHeight
-      if (scrollTo)
-        divElement?.scrollTo(0, scrollTo)
-  },[messages])
+    let scrollTo = divElement?.scrollHeight
+    if (scrollTo)
+      divElement?.scrollTo(0, scrollTo)
+  }, [messages])
 
   const send = (event: any) => {
     event.preventDefault()
     const data = {
-      question: "Какие виды нотариусов существуют?",
+      question: value,
       type,
       email: user?.email,
       llm_type: "OpenAI",
@@ -43,23 +44,13 @@ const Chat = () => {
     dispatch(addLocalMessage({ question: value }))
     dispatch(sendMessage(data))
     setValue('')
-    // setTimeout(() => {
-    //   let scrollTo = messagesEndRef.current.scrollHeight
-    //   messagesEndRef.current.scrollTo(0, scrollTo)
-    // //   let divElement = document.getElementById('messages')
-    // //   let scrollTo = divElement?.scrollHeight
-    // //   if (scrollTo)
-    // //     divElement?.scrollTo(0, scrollTo)
-    // }, 500)
   }
-
+  console.log(user, 'aaa');
   return (
     <div className={styles.container}>
-
       <div className={styles.content}>
         <div className={styles.header}>
           <img
-            // onClick={() => { navigate('/home') }}
             src={require('../../assets/images/logo.png')}
             alt='logo'
             className={styles.logo} />
@@ -68,16 +59,28 @@ const Chat = () => {
               onClick={() => setType('ordinary')}
               className={`${styles.button} 
               ${type === 'ordinary' && styles.checked}`} >
-              Обычный
+              Аспирант
             </button>
             <button
+              disabled
               onClick={() => setType('lawyer')}
               className={`${styles.button} 
-              ${type === 'lawyer' && styles.checked}`} >
-              Юрист
+              ${type === 'lawyer' && styles.checked} ${styles.disable}`} >
+              Профессор
             </button>
           </div>
-          <div />
+          <div className={styles.user} >
+            <h2>{user?.username}</h2>
+            <div className={styles.logout}  onClick={()=>{
+            localStorage.clear()
+            navigate('/home')
+          }}>
+              <img
+                src={logoutIcon}
+                alt='logout'
+              />
+            </div>
+          </div>
         </div>
         <div className={styles.subContainer} style={{ justifyContent: messages.length === 0 ? 'center' : 'space-between' }}>
           {

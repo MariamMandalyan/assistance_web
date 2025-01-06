@@ -39,6 +39,9 @@ export const register = createAsyncThunk(
 
 export const login = createAsyncThunk("auth/login", async (data: any) => {
     try {
+      console.log('object');
+      toast.done('bbb')
+
       const response: any = await API.post(`/login`, data.values);
       if(response){
         localStorage.setItem("accessToken", response.data.token);
@@ -46,6 +49,7 @@ export const login = createAsyncThunk("auth/login", async (data: any) => {
         getMe()
       }
     } catch (error: any) {
+      toast.done('aaaa')
       toast.error(error.message)
     }
   }

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import arrowButton from '../../assets/icons/arrowButton.svg';
 import { PuffLoader } from 'react-spinners';
 import { useAppDispatch, useAppSelector } from '../../store/store';
-import {register } from '../../store/authSlice';
+import { register } from '../../store/authSlice';
 
 const Registration: React.FC = () => {
   const status = useAppSelector((state) => state.auth.status);
@@ -19,6 +19,7 @@ const Registration: React.FC = () => {
       email: "",
       phonenumber: "",
       password: "",
+      checkbox: ''
     }
   });
 
@@ -54,7 +55,7 @@ const Registration: React.FC = () => {
             <Controller
               name="email"
               control={control}
-              render={({ field }) => <InputField {...field} placeholder='Email' type='text' valid={errors.email} message={errors.email?.message}/>}
+              render={({ field }) => <InputField {...field} placeholder='Email' type='text' valid={errors.email} message={errors.email?.message} />}
               rules={{
                 required: true,
                 pattern: {
@@ -75,7 +76,28 @@ const Registration: React.FC = () => {
             <Controller
               name="password"
               control={control}
-              render={({ field }) => <InputField {...field} placeholder='Пароль' type='text' valid={errors.password} message={errors.password?.message}/>}
+              render={({ field }) => <InputField {...field} placeholder='Пароль' type='text' valid={errors.password} message={errors.password?.message} />}
+              rules={{
+                required: true,
+                minLength: {
+                  value: 6,
+                  message: 'мин. 6 символов'
+                },
+              }}
+            />
+            <Controller
+              name="checkbox"
+              control={control}
+              render={({ field }) => {
+                return (
+                <div className={styles.privacy}>
+                  <p className={styles.privacyText}>Вы даете согласие на обработку представ­ленных персональных данных. <a href='' onClick={() => {
+                const fileUrl = "/register.pdf";
+                window.open(fileUrl, "_blank")
+              }}>Политика обработки</a></p>
+                  <input {...field} type='checkbox' className={styles.checkbox} />
+                </div>)
+              }}
               rules={{
                 required: true,
                 minLength: {

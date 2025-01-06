@@ -4,7 +4,7 @@ import {
   createSlice,
   PayloadAction,
 } from "@reduxjs/toolkit";
-import { CHATAPI } from "../services/API";
+import { API } from "../services/API";
 import { toast } from "react-toastify";
 
 interface IInitState {
@@ -22,7 +22,7 @@ export const sendMessage = createAsyncThunk(
   "chat/SendMessage",
   async (data: any) => {
     try {
-      const response: any = await CHATAPI.post(`/api/predict`, data);
+      const response: any = await API.post(`/api/predict`, data);
       if (response) {
         return { ...response.data.answer, type: data.type };
       }
@@ -41,8 +41,9 @@ const chatSlice = createSlice({
       state.messages.push(action.payload);
     },
     setMessages: (state, action: PayloadAction<any>) => {
-      state.messages = [...state.messages, ...action?.payload];
+      state.messages = action?.payload;
     },
+
   },
   extraReducers(builder: ActionReducerMapBuilder<IInitState>) {
     builder.addCase(

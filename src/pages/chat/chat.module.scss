@@ -6,7 +6,7 @@
 }
 
 .logo {
-  width: 41px;
+  width: 55px;
   cursor: pointer;
 }
 
@@ -144,4 +144,21 @@
 }
 .form{
   position: relative;
+}
+
+.disable{ 
+  background-color: #d6d6d6;
+  color: #a1a1a1;
+  cursor: default;
+  border: none;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logout{
+  cursor: pointer;
 }

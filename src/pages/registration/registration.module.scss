@@ -79,3 +79,17 @@
     background-color: #FFF;
   }
 }
+
+.privacy{
+  display: flex;
+}
+
+.privacyText{
+  font-size: 14px;
+  text-align: left;
+}
+
+.checkbox{
+  cursor: pointer;
+  width: 30px;
+}

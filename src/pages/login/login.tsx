@@ -15,8 +15,8 @@ const Login: React.FC = () => {
 
   const { control, handleSubmit, formState: { errors } } = useForm({
     defaultValues: {
-      email: 'example12345@mail.com',
-      password: '123456',
+      email: '',
+      password: '',
     }
   });
 
