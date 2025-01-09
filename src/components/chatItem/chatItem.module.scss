@@ -4,7 +4,9 @@
   cursor: default;
   max-width: 469px;
   position: relative;
-
+  gap: 22px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -20,7 +22,6 @@
   border: 1px solid #C9E5FF;
 }
 .text {
-  font-family: Raleway;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -30,15 +31,15 @@
 .link {
   cursor: pointer;
   color: #61ACF2;
-  font-weight: 600;
-  font-family: Inter;
   font-size: 16.04px;
   font-weight: 500;
-  line-height: 19.41px;
+  line-height: 16.41px;
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  display: block;
+  margin-top: 10px;
 }
 
 .lawyer{
